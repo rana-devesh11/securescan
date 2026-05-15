@@ -1,0 +1,10 @@
+# SecureScan Dependencies
+# Install with: pip3 install -r requirements.txt
+
+# Python security scanner
+bandit>=1.7.5
+
+# Note: Semgrep and Gitleaks are standalone binaries
+# Install via:
+#   macOS:   brew install semgrep gitleaks
+#   Linux:   See installation instructions in README.md
