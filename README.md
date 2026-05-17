@@ -5,21 +5,6 @@ A lightweight security scanner aggregator that orchestrates multiple SAST and se
 **Author:** Devesh Rana  
 **License:** MIT
 
-## Demo
-
-See SecureScan detecting 21 real vulnerabilities including SQL injection, command injection, and hardcoded secrets:
-
-**[Terminal Output Demo](demo/TERMINAL_DEMO.md)** - Professional presentation with 6 output panels  
-**[Complete Output](demo/clean_output.txt)** - Full terminal session  
-**[Recording](demo/securescan-demo.cast)** - Asciinema cast file
-
-```bash
-# Run demo yourself
-python3 securescan.py --path test_project/ --output results.json
-```
-
-![Vulnerabilities](https://img.shields.io/badge/Vulnerabilities-21_detected-red) ![Tools](https://img.shields.io/badge/Tools-3_integrated-blue) ![Deduplication](https://img.shields.io/badge/Deduplication-SHA256-green)
-
 ## Overview
 
 SecureScan addresses the challenge of security tool sprawl by providing a unified interface for running multiple security scanners. It normalizes outputs across tools and deduplicates findings using fingerprint-based hashing, typically reducing alert volume by 50-70%.
@@ -75,40 +60,6 @@ python3 securescan.py --path /path/to/code
 
 # Custom output file
 python3 securescan.py --output results.json
-```
-
-## Output Example
-
-```
-SecureScan - Security Tool Aggregator
-Target: test_project
-Scan ID: 40c89874
-
-Running Semgrep...
-Running Bandit...
-Running Gitleaks...
-
-Raw findings: 23
-Unique findings: 23
-Duplicates removed: 0 (0.0%)
-
-SCAN RESULTS
-
-Total Findings: 23
-
-By Severity:
-  HIGH:     4
-  MEDIUM:   4
-  LOW:      8
-
-By Category:
-  SAST:     22
-  SECRETS:  1
-
-By Tool:
-  semgrep:  7
-  bandit:   15
-  gitleaks: 1
 ```
 
 ## Architecture
